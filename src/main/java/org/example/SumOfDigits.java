@@ -1,0 +1,23 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+
+    public static void main(String arg[])
+    {
+        long number, sum;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a number: ");
+
+        number=sc.nextLong();
+//executes until the condition number!=0 becomes false
+        for(sum=0; number!=0; number=number/10)
+        {
+
+            sum = sum + number % 10;
+        }
+
+        System.out.println("Sum of digits: "+sum);
+    }
+}
